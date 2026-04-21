@@ -62,7 +62,7 @@ void left_pyramid(string alpha)
     
     for(int i = 0; i<alpha.size()-1; i++)
     {
-        for(int j = index; j>-1; j--)
+        for(int j = 0; j<index; j++)
         {
             cout<<alpha[j] << " ";
         }
@@ -72,22 +72,50 @@ void left_pyramid(string alpha)
     
 }
 
+
+
+//This is a function "Right Pyramid" will call to get the top.
+void top_right(string alpha)
+{
+    int spacesindex = alpha.size()-1; // Need Spaces
+    int arrayindex = alpha.size()-1; // Start at lowest number of course...
+    // This nested for loop will give us the upper right half:
+    
+    for(int i =0; i<alpha.size(); i++)
+    {
+        
+        for (int k=0; k<spacesindex; k++)
+        {
+            cout<<"+=";
+        }
+        
+        for(int j = arrayindex; j>spacesindex-1; j--)
+        {
+            
+        }
+        cout<<endl;
+    }
+    
+    
+}
 // Right pyramid function...
 void right_pyramid(string alpha)
 {
     int index = alpha.size()-1;   // Use this to print spaces.
     int arrayindex = alpha.size()-1; // Use this to print numbers
     
-    
+    //Call the function to make the top right:
+    top_right(alpha);
+    //cout<<endl;
     
      // This is the bottom of the pyramid.
     for(int i = 0; i<alpha.size()-1;i++)
     {
-        cout<<"  ";
+        //cout<<"+=";
         
         for(int j=0; j<index; j++)
         {
-            cout<< "  "; //"-+";
+            cout<< "+="; //"-+";
         }
         
         //for(int i = 0; i<alpha.size()-1; i++)
