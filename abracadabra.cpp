@@ -77,7 +77,7 @@ void left_pyramid(string alpha)
 //This is a function "Right Pyramid" will call to get the top.
 void top_right(string alpha)
 {
-    int spacesindex = alpha.size()-1; // Need Spaces
+    int spacesindex = alpha.size()-1+alpha.size()-2; // Need Spaces
     int arrayindex = alpha.size()-1; // Start at lowest number of course...
     // This nested for loop will give us the upper right half:
     
@@ -88,10 +88,11 @@ void top_right(string alpha)
         {
             cout<<"+=";
         }
+        spacesindex -=1;
         
-        for(int j = arrayindex; j>spacesindex-1; j--)
+        for(int j = alpha.size()-1; j>spacesindex-1; j--)
         {
-            
+            cout<<alpha[j] << " ";
         }
         cout<<endl;
     }
@@ -180,4 +181,3 @@ int main() {
     }
     return 0;
 }
-
