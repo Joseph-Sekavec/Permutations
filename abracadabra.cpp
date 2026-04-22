@@ -73,7 +73,6 @@ void left_pyramid(string alpha)
 }
 
 
-
 //This is a function "Right Pyramid" will call to get the top.
 void top_right(string alpha)
 {
@@ -141,12 +140,9 @@ void right_pyramid(string alpha)
    // cout<<'A';
     //cout<<endl;
     index++;
-    }
-
-    
+    }    
     
 }
-
 
 // Right sided hourglass
 
@@ -164,8 +160,7 @@ int main() {
         
         cin.ignore();
         cout<< "Please enter a string: "; getline(cin, alpha);
-        
-            
+                    
     cout<< "Input your 1 for pyramid, 2 for inverted triangle 3 for a pyramid from the left side, 4 to make a triangle appear from the right hand side: ";
     cin>>in;
     cout<< endl;
