@@ -80,20 +80,30 @@ void top_right(string alpha)
     int spacesindex = alpha.size()-1+alpha.size()-2; // Need Spaces
     int arrayindex = alpha.size()-1; // Start at lowest number of course...
     // This nested for loop will give us the upper right half:
-    
+    int size = 1;
     for(int i =0; i<alpha.size(); i++)
     {
         
         for (int k=0; k<spacesindex; k++)
         {
-            cout<<"+=";
+            //cout<<"+="; //This is a sanity check to verify spaces are actually being placed.
+            cout<<"  ";
         }
         spacesindex -=1;
         
-        for(int j = alpha.size()-1; j>spacesindex-1; j--)
-        {
-            cout<<alpha[j] << " ";
-        }
+        
+        int index = alpha.size()-1;
+       
+        
+       // for(int j = 0; j<alpha.size();j++)//spacesindex-1; j--)
+        //{
+            for(int k =0; k<size; k++)
+            {
+                cout<<alpha[index-k] << " ";
+                //cout<<"size is: "<<size<< " ";
+            }
+           size++;
+        //}
         cout<<endl;
     }
     
@@ -116,7 +126,7 @@ void right_pyramid(string alpha)
         
         for(int j=0; j<index; j++)
         {
-            cout<< "+="; //"-+";
+            cout<< "  ";// "+="; //"-+";
         }
         
         //for(int i = 0; i<alpha.size()-1; i++)
