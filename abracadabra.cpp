@@ -192,7 +192,28 @@ void sideways_upper(string alpha)
 }
 void sideways_lower(string alpha)
 {
-
+    int spaces = 1;
+    int index = alpha.size()-2;
+    for(int k =0; k<alpha.size()-1;k++)
+    {
+        for(int i = 0; i<index+1; i++)
+        {
+            //cout<<"i is: "<<i<<endl;
+            cout<<alpha[i]<<" ";
+        }
+        for(int i = 0; i<spaces; i++)
+        {
+            cout<<"  ";
+        }
+        for(int i = index; i>-1; i--)
+        {
+            //cout<<"i is: "<<i<<endl;
+            cout<<alpha[i]<<" ";
+        }
+        cout<<endl;
+        spaces+=2;
+        index-=1;
+    }
 }
 
 void sideways_hourglass(string alpha)
