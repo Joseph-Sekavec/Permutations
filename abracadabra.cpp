@@ -151,7 +151,30 @@ void right_pyramid(string alpha)
 void hourglass(string alpha)
 {
     point_down(alpha);
-    point_up(alpha);
+    if(alpha.size()>1)
+    {
+        point_up(alpha);
+    }
+}
+
+//Create a sideways hourglass. Might have to use logic: upperleft_and_right, then lowerleft_and_right...
+void sideways_upper(string alpha)
+{
+    // Think... Need to 
+    
+}
+void sideways_lower(string alpha)
+{
+
+}
+
+void sideways_hourglass(string alpha)
+{
+    sideways_upper(alpha); // Will print the whole damn thing.
+    if(alpha.size()>1)
+    {
+        sideways_lower(alpha);
+    }
 }
 
 int main() {
@@ -169,7 +192,7 @@ int main() {
         cin.ignore();
         cout<< "Please enter a string: "; getline(cin, alpha);
                     
-    cout<< "Input your 1 for pyramid, 2 for inverted triangle 3 for a pyramid from the left side, 4 to make a triangle appear from the right hand side, 5 to make an hourglass: ";
+    cout<< "Input your 1 for pyramid, 2 for inverted triangle 3 for a pyramid from the left side, 4 to make a triangle appear from the right hand side, 5 to make an hourglass, 6 to make a sideways hourglass: ";
     cin>>in;
     cout<< endl;
     
@@ -193,6 +216,10 @@ int main() {
         else if(in == 5)
         {
             hourglass(alpha);
+        }
+        else if(in ==6)
+        {
+            sideways_hourglass(alpha);
         }
         cout<< endl;
     }
