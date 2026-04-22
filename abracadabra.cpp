@@ -161,7 +161,34 @@ void hourglass(string alpha)
 void sideways_upper(string alpha)
 {
     // Think... Need to 
-    
+    int spaces = 2*alpha.size()-3;
+    int index = 1;
+    for(int k = 0; k<alpha.size();k++)
+    {
+    for(int i =0;i<index; i++) // Left side chars
+    {
+        cout<< alpha[i]<< " ";
+    }
+    if (spaces >0) // Insert Spaces
+    {
+        for(int i =0;i<spaces;i++) //
+        {
+            cout<< "  ";
+        }
+    }
+    int n = index;
+    for(int i = 0;i< index;i++) // Insert Right Side chars
+    {
+        if(n != alpha.size())
+        {
+            cout<< alpha[alpha.size()-alpha.size()+i]<< " ";
+        }
+        --n;
+    }
+    ++index;
+    spaces -=2;
+    cout<<endl;
+    }
 }
 void sideways_lower(string alpha)
 {
