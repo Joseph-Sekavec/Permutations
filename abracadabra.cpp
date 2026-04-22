@@ -16,7 +16,10 @@ void point_down(string alpha)
         {
             cout<<alpha[j]<<" ";
         }
-        cout<<endl;
+        if(index >1)
+        {
+            cout<<endl;
+        }
         --index;
     }
     
@@ -144,7 +147,12 @@ void right_pyramid(string alpha)
     
 }
 
-// Right sided hourglass
+// Normal Hourglass
+void hourglass(string alpha)
+{
+    point_down(alpha);
+    point_up(alpha);
+}
 
 int main() {
     //string alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -161,7 +169,7 @@ int main() {
         cin.ignore();
         cout<< "Please enter a string: "; getline(cin, alpha);
                     
-    cout<< "Input your 1 for pyramid, 2 for inverted triangle 3 for a pyramid from the left side, 4 to make a triangle appear from the right hand side: ";
+    cout<< "Input your 1 for pyramid, 2 for inverted triangle 3 for a pyramid from the left side, 4 to make a triangle appear from the right hand side, 5 to make an hourglass: ";
     cin>>in;
     cout<< endl;
     
@@ -181,6 +189,10 @@ int main() {
         {
             right_pyramid(alpha);
             
+        }
+        else if(in == 5)
+        {
+            hourglass(alpha);
         }
         cout<< endl;
     }
