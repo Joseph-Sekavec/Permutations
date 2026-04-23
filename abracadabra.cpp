@@ -60,7 +60,7 @@ void left_pyramid(string alpha)
         ++index;
     }
     
-    index -=3;
+    index -=2;
     //cout<<"index is: "<<index<<endl;
     
     for(int i = 0; i<alpha.size()-1; i++)
