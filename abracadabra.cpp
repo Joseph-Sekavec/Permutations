@@ -21,8 +21,7 @@ void point_down(string alpha)
             cout<<endl;
         }
         --index;
-    }
-    
+    }    
 }
 
 void point_up(string alpha)
@@ -219,12 +218,6 @@ void sideways_lower(string alpha)
 void up_down(string alpha)
 {
     point_up(alpha);
-    string oneless;
-    for(int i=0; i<alpha.size()-1; i++)
-    {
-        oneless += alpha[i];
-    }
-    
     point_down(alpha);
 }
 
