@@ -216,6 +216,24 @@ void sideways_lower(string alpha)
     }
 }
 
+void up_down(string alpha)
+{
+    point_up(alpha);
+    string oneless;
+    for(int i=0; i<alpha.size()-1; i++)
+    {
+        oneless += alpha[i];
+    }
+    
+    point_down(alpha);
+}
+
+void triforce(string alpha)
+{
+    point_up(alpha);
+    sideways_upper(alpha);
+}
+
 void sideways_hourglass(string alpha)
 {
     sideways_upper(alpha); // Will print the whole damn thing.
@@ -240,7 +258,7 @@ int main() {
         cin.ignore();
         cout<< "Please enter a string: "; getline(cin, alpha);
                     
-    cout<< "Input your 1 for pyramid, 2 for inverted triangle 3 for a pyramid from the left side, 4 to make a triangle appear from the right hand side, 5 to make an hourglass, 6 to make a sideways hourglass: ";
+    cout<< "Input your 1 for pyramid, 2 for inverted triangle 3 for a pyramid from the left side, 4 to make a triangle appear from the right hand side, 5 to make an hourglass, 6 to make a sideways hourglass, if you want to make the shape of two triangles mirrored up and down, enter 7, if you want a triforce enter 8: ";
     cin>>in;
     cout<< endl;
     
@@ -268,6 +286,10 @@ int main() {
         else if(in ==6)
         {
             sideways_hourglass(alpha);
+        }
+        else if(in == 7)
+        {
+            up_down(alpha);
         }
         cout<< endl;
     }
