@@ -181,7 +181,7 @@ void sideways_upper(string alpha)
     {
         if(n != alpha.size())
         {
-            cout<< alpha[alpha.size()-alpha.size()+i]<< " ";
+            cout<< alpha[n-1]<< " "; // We put the "last" first.
         }
         --n;
     }
